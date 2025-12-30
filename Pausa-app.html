@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pausa - Un respiro en tu bolsillo</title>
+    <style>
+        :root {
+            --color-fondo: #f0f4f7;
+            --color-primario: #5e8d8d; /* Verde azulado del logo */
+            --color-acento: #a8dadc;
+            --texto: #2f4f4f;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--texto);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+            border-radius: 20px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        h1 { margin: 10px 0 5px; font-weight: 300; }
+        p.slogan { font-style: italic; opacity: 0.8; margin-bottom: 30px; }
+
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card h2 { font-size: 1.2rem; margin-top: 0; color: var(--color-primario); }
+
+        /* Animación de Respiración */
+        .circle-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .breathing-circle {
+            width: 100px;
+            height: 100px;
+            background-color: var(--color-acento);
+            border-radius: 50%;
+            animation: breathe 8s infinite ease-in-out;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.8); }
+        }
+
+        .btn {
+            background-color: var(--color-primario);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            width: 100%;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .list-item {
+            border-left: 3px solid var(--color-acento);
+            padding-left: 10px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-placeholder">P</div>
+        <h1>Pausa</h1>
+        <p class="slogan">"Encuentra tu centro en un mundo ruidoso."</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Respiración Consciente</h2>
+            <div class="circle-container">
+                <div class="breathing-circle"></div>
+            </div>
+            <p style="text-align:center; font-size: 0.8rem;">Inhala cuando crezca, exhala cuando encoja.</p>
+        </div>
+
+        <div class="card">
+            <h2>Técnica 5-4-3-2-1</h2>
+            <div class="list-item"><b>5</b> cosas que ves.</div>
+            <div class="list-item"><b>4</b> cosas que tocas.</div>
+            <div class="list-item"><b>3</b> sonidos que oyes.</div>
+            <div class="list-item"><b>2</b> olores que percibes.</div>
+            <div class="list-item"><b>1</b> afirmación positiva.</div>
+        </div>
+
+        <div class="card">
+            <h2>¿Cómo te sientes ahora?</h2>
+            <textarea style="width:100%; border:1px solid #ddd; border-radius:10px; padding:10px; margin-bottom:10px;" rows="3" placeholder="Escribe aquí..."></textarea>
+            <button class="btn">Guardar Momento</button>
+        </div>
+    </div>
+
+    <footer style="margin: 40px 0; font-size: 0.7rem; opacity: 0.5;">
+        Pausa App © 2024
+    </footer>
+
+</body>
+</html>
